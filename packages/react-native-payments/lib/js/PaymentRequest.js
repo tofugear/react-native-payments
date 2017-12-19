@@ -335,7 +335,7 @@ export default class PaymentRequest {
       // retrieving the full wallet.
       getPaymentToken: () => NativePayments.getFullWalletAndroid(
         googleTransactionId,
-        getPlatformMethodData(JSON.parse(this._serializedMethodData, Platform.OS)),
+        getPlatformMethodData(JSON.parse(this._serializedMethodData), Platform.OS),
         convertDetailAmountsToString(this._details)
       )
     };
